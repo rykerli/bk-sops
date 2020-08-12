@@ -654,3 +654,9 @@ class CollectionsCC(object):
             path="/api/c/compapi{bk_api_ver}/cc/list_set_template/",
             description="查询集群模板",
         )
+        self.search_topo_tree = ComponentAPI(
+            client=self.client,
+            method="POST",
+            path="/api/c/compapi{bk_api_ver}/cc/search_topo_tree/",
+            description="根据业务名、自定义层级名、集群、模块名模糊搜索业务的拓扑树",
+        )
