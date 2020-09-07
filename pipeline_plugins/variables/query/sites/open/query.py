@@ -17,8 +17,11 @@ from django.http import JsonResponse
 from django.utils.translation import ugettext_lazy as _
 
 from pipeline_plugins.base.utils.inject import supplier_account_inject
+from pipeline_plugins.variables.collections.sites.open.cmdb.var_cmdb_set_module_ip_selector import (
+    get_set_list,
+    get_service_template_list,
+)
 from pipeline_plugins.variables.query.sites.open import select
-from pipeline_plugins.variables.utils import get_service_template_list, get_set_list
 
 from gcloud.conf import settings
 from gcloud.utils.cmdb import batch_request
